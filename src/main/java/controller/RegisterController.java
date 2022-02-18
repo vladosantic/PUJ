@@ -1,4 +1,4 @@
-package ba.sum.fsre.puj.pujjavafx20212022;
+package controller;
 
 import ba.sum.fsre.puj.pujjavafx20212022.Main;
 import javafx.fxml.FXML;
@@ -22,6 +22,8 @@ public class RegisterController {
     private TextField addressTxt;
     @FXML
     private TextField phNumTxt;
+    @FXML
+    private TextField faksTxt;
 
     @FXML
     private PasswordField passwordTxt;
@@ -34,8 +36,9 @@ public class RegisterController {
         String mail = this.mailTxt.getText().toString();
         String address = this.addressTxt.getText().toString();
         String ph = this.phNumTxt.getText().toString();
+        String faks = this.faksTxt.getText().toString();
 
-        if (name.equals("") || lastname.equals("") || mail.equals("") || address.equals("") || ph.equals("") || password.equals("")){
+        if (name.equals("") || lastname.equals("") || mail.equals("") || address.equals("") || ph.equals("") || password.equals("") || faks.equals("")){
             this.errorMsg.setText("Morate unijeti sva polja!");
         } else {
             this.errorMsg.setText("");
@@ -48,6 +51,9 @@ public class RegisterController {
             k.setPhNumber(ph);
             k.setFakultet_fk(1);
             k.save();
+            Main.showWindow(
+                    "menu.fxml",
+                    "Menu", 800, 600);
         }
     }
 }

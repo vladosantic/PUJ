@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #403c3c;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+   <children>
+      <Label fx:id="emailBox" layoutX="197.0" layoutY="2.0" prefHeight="24.0" prefWidth="309.0" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="9.0" prefHeight="76.0" prefWidth="171.0" text="IZBORNIK" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="30.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutY="96.0" prefHeight="5.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" />
+      <AnchorPane layoutX="185.0" prefHeight="600.0" prefWidth="5.0" style="-fx-background-color: #ffffff;" />
+      <Button layoutX="34.0" layoutY="142.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="131.0" text="Button">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="34.0" layoutY="256.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="131.0" text="Button">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font></Button>
+      <Button layoutX="34.0" layoutY="362.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="131.0" text="Button">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font></Button>
+      <Button layoutX="34.0" layoutY="473.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="131.0" text="Button">
+         <font>
+            <Font name="Candara Bold" size="20.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

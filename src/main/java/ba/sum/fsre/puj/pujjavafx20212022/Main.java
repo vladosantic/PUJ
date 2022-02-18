@@ -13,17 +13,23 @@ import java.io.IOException;
 import java.sql.Connection;
 
 public class Main extends Application {
-    private static Stage primaryStage;
-
+    public static Stage primaryStage;
     @Override
     public void start(Stage stage) throws IOException {
         Main.primaryStage = stage;
         Main.showWindow(
-                "register.fxml",
-                "Registracija na sustav", 600, 450);
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("register.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 190);
+                "login.fxml",
+                "Prijavite se na sustav", 400, 300);
     }
+
+    /*public void start(Stage stage) throws IOException {
+        Main.primaryStage = stage;
+        Main.showWindow(
+                "login.fxml",
+                "Prijava na sustav", 400, 300);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 400, 300);
+    }*/
 
     public static void showWindow(String viewName, String title, int w, int h) throws IOException {
         FXMLLoader root = new FXMLLoader(Main.class.getResource(viewName));
@@ -33,7 +39,7 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws Exception {
-        database db = new database();
+        /*database db = new database();
         fakultet f = new fakultet();
         korisnik k = new korisnik();
         djelatnik d = new djelatnik();
@@ -46,13 +52,7 @@ public class Main extends Application {
         d.create(djelatnik.class);
         s.create(sektor.class);
         st.create(stol.class);
-        r.create(rezervacija.class);
-
-        /*k.setName("Vlado");
-        k.setLastName("Santic");
-        k.setEmail("vlado@sum.ba");
-        k.setPhNumber("063181970");
-        k.setAddress("BB19a");*/
+        r.create(rezervacija.class);*/
         launch();
         }
 }

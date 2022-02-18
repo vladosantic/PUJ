@@ -13,4 +13,6 @@ module ba.sum.fsre.puj.pujjavafx20212022 {
 
     opens ba.sum.fsre.puj.pujjavafx20212022 to javafx.fxml;
     exports ba.sum.fsre.puj.pujjavafx20212022;
+    exports controller;
+    opens controller to javafx.fxml;
 }

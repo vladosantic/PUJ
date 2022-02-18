@@ -5,32 +5,59 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="BASELINE_LEFT" prefHeight="338.0" prefWidth="336.0" spacing="5.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.sum.fsre.puj.pujjavafx20212022.RegisterController">
+<VBox alignment="BASELINE_LEFT" prefHeight="500.0" prefWidth="600.0" spacing="5.0" style="-fx-background-color: #403c3c;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
     <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="34.0" prefHeight="17.0" prefWidth="430.0" text="REGISTRACIJA" textAlignment="CENTER">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="34.0" prefHeight="22.0" prefWidth="548.0" text="REGISTRACIJA" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Candara Bold" size="18.0" />
          </font>
       </Label>
-        <Label text="Ime" />
+        <Label text="Ime" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="13.0" />
+         </font></Label>
         <TextField fx:id="nameTxt" prefHeight="25.0" prefWidth="170.0" />
-      <Label layoutX="30.0" layoutY="58.0" text="Prezime" />
+      <Label layoutX="30.0" layoutY="58.0" text="Prezime" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="13.0" />
+         </font></Label>
       <TextField fx:id="lastnameTxt" layoutX="30.0" layoutY="84.0" prefHeight="25.0" prefWidth="170.0" />
-        <Label prefHeight="17.0" prefWidth="307.0" text="Email" />
+        <Label prefHeight="17.0" prefWidth="307.0" text="Email" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="13.0" />
+         </font></Label>
       <TextField fx:id="mailTxt" layoutX="30.0" layoutY="84.0" prefHeight="25.0" prefWidth="170.0" />
-      <Label layoutX="30.0" layoutY="163.0" prefHeight="17.0" prefWidth="307.0" text="Lozinka" />
-      <PasswordField fx:id="passwordTxt"/>
-      <Label layoutX="30.0" layoutY="110.0" text="Broj telefona" />
+      <Label layoutX="30.0" layoutY="163.0" prefHeight="17.0" prefWidth="307.0" text="Lozinka" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="13.0" />
+         </font></Label>
+      <PasswordField fx:id="passwordTxt" />
+      <Label layoutX="30.0" layoutY="110.0" text="Broj telefona" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="13.0" />
+         </font></Label>
       <TextField fx:id="phNumTxt" layoutX="30.0" layoutY="84.0" prefHeight="25.0" prefWidth="170.0" />
-      <Label layoutX="30.0" layoutY="214.0" text="Adresa" />
+      <Label layoutX="30.0" layoutY="214.0" text="Adresa" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="13.0" />
+         </font></Label>
       <TextField fx:id="addressTxt" layoutX="30.0" layoutY="240.0" prefHeight="25.0" prefWidth="170.0" />
-        <Button mnemonicParsing="false" onAction="#onRegister" text="Registracija" />
-        <Label fx:id="errorMsg" alignment="CENTER" prefHeight="19.0" prefWidth="320.0" textFill="RED">
+      <Label text="Fakultet (FSRE, FPMOZ, FFMO, EFMO, GFMO, MEFMO)" textFill="WHITE">
+         <font>
+            <Font name="Candara" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="faksTxt" layoutX="30.0" layoutY="240.0" prefHeight="25.0" prefWidth="170.0"/>
+        <Button mnemonicParsing="false" onAction="#onRegister" text="Registracija">
+         <font>
+            <Font name="Candara" size="12.0" />
+         </font></Button>
+        <Label fx:id="errorMsg" alignment="CENTER" contentDisplay="CENTER" prefHeight="19.0" prefWidth="587.0" textAlignment="CENTER" textFill="RED">
             <font>
-                <Font name="System Bold" size="13.0" />
+                <Font name="Candara Bold" size="23.0" />
             </font>
         </Label>
     </children>

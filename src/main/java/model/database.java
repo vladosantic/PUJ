@@ -48,7 +48,6 @@ public class database{
             CONNECTION = DriverManager.getConnection(
                     "jdbc:mysql://"+hostname+ "/" +database, user, password
             );
-            System.out.println("test");
         } catch (SQLException e) {
             System.out.println("Neuspješno spajanje na bazu podataka: " + e.getMessage());
         }
