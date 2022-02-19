@@ -10,6 +10,8 @@ public class djelatnik extends Table{
     @Entity(type="VARCHAR", size=45)
     String email;
     @Entity(type="VARCHAR", size=45)
+    String lozinka;
+    @Entity(type="VARCHAR", size=45)
     String broj_telefona;
     @Entity(type="VARCHAR", size=45)
     String smjena;
