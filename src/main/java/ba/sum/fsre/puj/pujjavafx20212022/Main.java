@@ -30,6 +30,11 @@ public class Main extends Application {
     }
 
     public static void main(String[] args) throws Exception {
+        fakultet.create(fakultet.class);
+        korisnik.create(korisnik.class);
+        sektor.create(sektor.class);
+        stol.create(stol.class);
+        djelatnik.create(djelatnik.class);
         launch();
         }
 }

@@ -80,7 +80,7 @@ public class AdminPanelController implements Initializable {
         Parent root = fxmlLoader.load();
         MenuController m = fxmlLoader.getController();
         m.pass(username);
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.setTitle("Izbornik");
         primaryStage.show();
     }
