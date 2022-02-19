@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProfilController">
+   <children>
+      <BorderPane prefHeight="44.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+         <center>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="31.0" prefWidth="368.0" text="PROFIL" textAlignment="CENTER" textFill="#fcfcfc" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Candara Bold" size="25.0" />
+               </font>
+            </Label>
+         </center>
+      </BorderPane>
+      <Label layoutX="14.0" layoutY="62.0" prefHeight="20.0" prefWidth="40.0" text="Ime:">
+         <font>
+            <Font name="Candara Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="imeBox" layoutX="52.0" layoutY="64.0">
+         <font>
+            <Font name="Candara Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="95.0" text="Prezime:">
+         <font>
+            <Font name="Candara Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="prezimeBox" layoutX="80.0" layoutY="97.0">
+         <font>
+            <Font name="Candara Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="130.0" text="Korisničko ime:">
+         <font>
+            <Font name="Candara Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="usernameBox" layoutX="126.0" layoutY="132.0">
+         <font>
+            <Font name="Candara Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="166.0" text="E-mail:">
+         <font>
+            <Font name="Candara Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailBox" layoutX="66.0" layoutY="168.0">
+         <font>
+            <Font name="Candara Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="200.0" text="Broj telefona:">
+         <font>
+            <Font name="Candara Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="phBox" layoutX="112.0" layoutY="202.0">
+         <font>
+            <Font name="Candara Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="236.0" text="Adresa:">
+         <font>
+            <Font name="Candara Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="addressBox" layoutX="74.0" layoutY="238.0">
+         <font>
+            <Font name="Candara Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" layoutX="261.0" layoutY="320.0" mnemonicParsing="false" onAction="#povratak" style="-fx-background-color: #000000;" text="Povratak" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

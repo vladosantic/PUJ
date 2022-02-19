@@ -6,31 +6,41 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #403c3c;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
    <children>
-      <Label fx:id="emailBox" layoutX="197.0" layoutY="2.0" prefHeight="24.0" prefWidth="309.0" textFill="WHITE">
-         <font>
-            <Font name="Candara" size="14.0" />
-         </font></Label>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="9.0" prefHeight="76.0" prefWidth="171.0" text="IZBORNIK" textFill="WHITE">
-         <font>
-            <Font name="Candara" size="30.0" />
-         </font>
-      </Label>
-      <AnchorPane layoutY="96.0" prefHeight="5.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" />
-      <AnchorPane layoutX="185.0" prefHeight="600.0" prefWidth="5.0" style="-fx-background-color: #ffffff;" />
-      <Button layoutX="34.0" layoutY="142.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="131.0" text="Button">
+      <AnchorPane layoutX="189.0" layoutY="-1.0" prefHeight="58.0" prefWidth="611.0" style="-fx-background-color: #1f1f1f;">
+         <children>
+            <Label fx:id="usernameBox" layoutX="14.0" layoutY="17.0" prefHeight="24.0" prefWidth="376.0" textFill="#979797">
+               <font>
+                  <Font name="Candara" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="datetimeTxt" alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="417.0" layoutY="9.0" prefHeight="17.0" prefWidth="180.0" text="" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Candara Italic" size="19.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane layoutX="-1.0" prefHeight="600.0" prefWidth="191.0" style="-fx-background-color: #000000;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="6.0" layoutY="-6.0" prefHeight="71.0" prefWidth="180.0" text="IZBORNIK" textFill="WHITE">
+               <font>
+                  <Font name="Candara" size="30.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Button layoutX="247.0" layoutY="114.0" mnemonicParsing="false" onAction="#stolovi" prefHeight="120.0" prefWidth="180.0" style="-fx-background-color: #000000;" text="Pregled stolova" textFill="#bcbcbc">
          <font>
             <Font name="Candara Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="34.0" layoutY="256.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="131.0" text="Button">
+      <Button layoutX="561.0" layoutY="114.0" mnemonicParsing="false" onAction="#profil" prefHeight="120.0" prefWidth="180.0" style="-fx-background-color: #000000;" text="Profil" textFill="#bcbcbc">
          <font>
             <Font name="Candara Bold" size="20.0" />
          </font></Button>
-      <Button layoutX="34.0" layoutY="362.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="131.0" text="Button">
+      <Button layoutX="241.0" layoutY="377.0" mnemonicParsing="false" onAction="#about" prefHeight="120.0" prefWidth="180.0" style="-fx-background-color: #000000;" text="O projektu" textFill="#bcbcbc">
          <font>
             <Font name="Candara Bold" size="20.0" />
          </font></Button>
-      <Button layoutX="34.0" layoutY="473.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="131.0" text="Button">
+      <Button layoutX="561.0" layoutY="377.0" mnemonicParsing="false" onAction="#odjava" prefHeight="120.0" prefWidth="180.0" style="-fx-background-color: #000000;" text="Odjava" textFill="#bcbcbc">
          <font>
             <Font name="Candara Bold" size="20.0" />
          </font></Button>

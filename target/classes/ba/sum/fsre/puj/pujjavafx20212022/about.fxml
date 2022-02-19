@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #666666;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AboutController">
+   <children>
+      <AnchorPane layoutY="-13.0" prefHeight="58.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="193.0" layoutY="18.0" prefHeight="34.0" prefWidth="214.0" text="O PROJEKTU" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="18.0" />
+               </font></Label>
+            <Button layoutX="518.0" layoutY="25.0" mnemonicParsing="false" onAction="#povratak" style="-fx-background-color: #000000;" text="Natrag" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Candara Bold" size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label fx:id="textBox" layoutX="12.0" layoutY="58.0" prefHeight="333.0" prefWidth="577.0" textFill="WHITE">
+         <font>
+            <Font name="Candara Bold Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

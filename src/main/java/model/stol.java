@@ -17,11 +17,11 @@ public class stol extends Table{
             this.id = id;
         }
 
-        public String getStats() {
+        public String getName() {
             return status;
         }
 
-        public void setStats(String status) {
+        public void setName(String status) {
             this.status = status;
         }
 

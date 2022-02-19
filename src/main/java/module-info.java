@@ -12,6 +12,7 @@ module ba.sum.fsre.puj.pujjavafx20212022 {
     requires java.sql;
 
     opens ba.sum.fsre.puj.pujjavafx20212022 to javafx.fxml;
+    opens model;
     exports ba.sum.fsre.puj.pujjavafx20212022;
     exports controller;
     opens controller to javafx.fxml;

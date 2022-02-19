@@ -8,6 +8,8 @@ public class korisnik extends Table {
     @Entity(type = "VARCHAR", size = 45)
     String prezime;
     @Entity(type = "VARCHAR", size = 45)
+    String k_ime;
+    @Entity(type = "VARCHAR", size = 45)
     String email;
     @Entity(type = "VARCHAR", size = 45)
     String lozinka;
@@ -43,6 +45,14 @@ public class korisnik extends Table {
     }
 
     public String getPassword(){return lozinka;}
+
+    public String getUsername() {
+        return k_ime;
+    }
+
+    public void setUsername(String username) {
+        this.k_ime = username;
+    }
 
     public void setPassword(String pass){this.lozinka = pass;}
 

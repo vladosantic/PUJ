@@ -23,20 +23,31 @@ public class LoginController {
     private Label errorMsg;
 
     @FXML
-    private TextField emailTxt;
+    private TextField usernameTxt;
 
     @FXML
     private PasswordField passwordTxt;
 
     @FXML
-    protected void onLogin() throws IOException {
-        String email = this.emailTxt.getText().toString();
+    protected void onLogin() throws IOException, SQLException {
+        String username = this.usernameTxt.getText().toString();
         String password = this.passwordTxt.getText().toString();
-        if (email.equals("") || password.equals("")) {
+        if (username.equals("") || password.equals("")) {
             this.errorMsg.setText("Morate unijeti sva polja!");
-        } else {
+        }
+        else if(isAdmin(username,password)){
+            this.errorMsg.setText("");
+            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("adminPanel.fxml"));
+            root = fxmlLoader.load();
+            AdminPanelController m = fxmlLoader.getController();
+            m.pass(username);
+            primaryStage.setScene(new Scene(root, 600, 400));
+            primaryStage.setTitle("Admin Panel");
+            primaryStage.show();
+        }
+        else{
             try {
-                String SQL = "SELECT * FROM korisnik WHERE email = '" + email + "' and lozinka = '" + password + "'";
+                String SQL = "SELECT * FROM korisnik WHERE k_ime = '" + username + "' and lozinka = '" + password + "'";
                 Statement stmt = database.CONNECTION.createStatement();
                 ResultSet rs = stmt.executeQuery(SQL);
                 if (rs.next()) {
@@ -44,7 +55,7 @@ public class LoginController {
                     FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("menu.fxml"));
                     root = fxmlLoader.load();
                     MenuController m = fxmlLoader.getController();
-                    m.pass(email);
+                    m.pass(username);
                     primaryStage.setScene(new Scene(root, 800, 600));
                     primaryStage.setTitle("Izbornik");
                     primaryStage.show();
@@ -54,7 +65,20 @@ public class LoginController {
             }
         }
     }
-            @FXML
+
+    private boolean isAdmin(String username, String password) throws SQLException, IOException {
+        String SQL = "SELECT * FROM djelatnik WHERE email = '" + username + "' and lozinka = '" + password + "'";
+        Statement stmt = database.CONNECTION.createStatement();
+        ResultSet rs = stmt.executeQuery(SQL);
+        if(rs.next()){
+            return true;
+        }else {
+            this.errorMsg.setText("Pogrešni podaci. Pokušajte ponovno!");
+            return false;
+        }
+    }
+
+    @FXML
             protected void registracija () throws IOException {
                 Main.showWindow("register.fxml", "Registracija", 600, 500);
             }
